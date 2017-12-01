@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScanMeasure.MainPage" Title="Smart Track">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="plainButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#eee"/>
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="BorderRadius" Value="0"/>
+                <Setter Property="FontSize" Value="18" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Logout" Clicked="OnLogoutButtonClicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <Grid Padding="5, 10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Text="Please choose an asset type:" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" />
+            <Button Text = "Casing" Grid.Row="1" Grid.Column="0" Style="{StaticResource plainButton}" Clicked="OnAssetTypeButtonClicked" />
+            <Button Text = "BITS" Grid.Row="1" Grid.Column="1" Style="{StaticResource plainButton}" Clicked="OnAssetTypeButtonClicked" />
+            <Button Text = "MOTORS" Grid.Row="1" Grid.Column="2" Style="{StaticResource plainButton}" Clicked="OnAssetTypeButtonClicked" />
+            <Button Text = "MUD" Grid.Row="2" Grid.Column="0" Style="{StaticResource plainButton}" Clicked="OnAssetTypeButtonClicked" />
+            <Button Text = "DHT" Grid.Row="2" Grid.Column="1" Style="{StaticResource plainButton}" Clicked="OnAssetTypeButtonClicked" />
+            <Button Text = "RIG" Grid.Row="2" Grid.Column="2" Style="{StaticResource plainButton}" Clicked="OnAssetTypeButtonClicked" />
+            <Button Text = "MWD" Grid.Row="3" Grid.Column="0" Style="{StaticResource plainButton}" Clicked="OnAssetTypeButtonClicked" />
+            <Button Text = "DRILL PIPE" Grid.Row="3" Grid.Column="1" Style="{StaticResource plainButton}" Clicked="OnAssetTypeButtonClicked" />
+            <Button Text = "OTHER" Grid.Row="3" Grid.Column="2" Style="{StaticResource plainButton}" Clicked="OnAssetTypeButtonClicked" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
