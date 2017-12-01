@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScanMeasure.BillOfGoodsPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Padding="5, 15, 5, 5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1"/>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="1"/>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="1"/>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="1"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="1" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="1" />
+                    <ColumnDefinition Width="3*" />
+                </Grid.ColumnDefinitions>
+                <BoxView Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" BackgroundColor="#999" HeightRequest="1" VerticalOptions="End" HorizontalOptions="FillAndExpand"/>
+                <BoxView Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="5" BackgroundColor="#999" HeightRequest="1" VerticalOptions="End" HorizontalOptions="FillAndExpand"/>
+                <BoxView Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="5" BackgroundColor="#999" HeightRequest="1" VerticalOptions="End" HorizontalOptions="FillAndExpand"/>
+                <BoxView Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="5" BackgroundColor="#999" HeightRequest="1" VerticalOptions="End" HorizontalOptions="FillAndExpand"/>
+
+                <Label Text="JOINTS" Grid.Row="1" Grid.Column="0" FontAttributes="Bold" HorizontalOptions="Center" />
+                <Label Text="FOOTAGE" Grid.Row="1" Grid.Column="2" FontAttributes="Bold" HorizontalOptions="Center" />
+                <Label Text="DESCRIPTION" Grid.Row="1" Grid.Column="4" FontAttributes="Bold" HorizontalOptions="Center" />
+                <Label Text="10" Grid.Row="3" Grid.Column="0" HorizontalOptions="Center" />
+                <Label Text="407.68" Grid.Row="3" Grid.Column="2" HorizontalOptions="Center" />
+                <Label Text="9-5/8 40# 9-110 EC" Grid.Row="3" Grid.Column="4" HorizontalOptions="Center" />
+                <Label Text="8" Grid.Row="5" Grid.Column="0" HorizontalOptions="Center" />
+                <Label Text="318.14" Grid.Row="5" Grid.Column="2" HorizontalOptions="Center" />
+                <Label Text="9-5/8 80# 9-110 EC" Grid.Row="5" Grid.Column="4" HorizontalOptions="Center" />
+
+                <!--Vertical lines and no "stuff"-->
+                <BoxView Grid.Column="1" Grid.Row="0" Grid.RowSpan="7"  BackgroundColor="#999" WidthRequest="1" VerticalOptions="FillAndExpand" HorizontalOptions="End"/>
+                <BoxView Grid.Column="3" Grid.Row="0" Grid.RowSpan="7"  BackgroundColor="#999" WidthRequest="1" VerticalOptions="FillAndExpand" HorizontalOptions="End"/>
+            </Grid>
+            <StackLayout Padding="0, 20">
+                <Label Text="✓ Matches BOM/Shipments." FontAttributes="Bold" TextColor="Green"/>
+                <StackLayout Orientation="Horizontal" Padding="0, 15, 0, 0">
+                    <Button Text="Ft -> M" HorizontalOptions="EndAndExpand" />
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
